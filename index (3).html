@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio — Scalable Technologies</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8fc;--card:#fff;--ink:#0f1b3d;--mute:#5b6784;--line:#dfe5f1;--accent:#4a6cff;--accent2:#8a4dff;--hero:#07070f;--heroink:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1226;--card:#131c38;--ink:#eef2ff;--mute:#9aa6c6;--line:#243056;--accent:#6b8bff;--hero:#080e20}}
+:root[data-theme="dark"]{--bg:#0b1226;--card:#131c38;--ink:#eef2ff;--mute:#9aa6c6;--line:#243056;--accent:#6b8bff;--hero:#080e20}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.top{background:var(--hero) url("background.jpg") center 38%/cover no-repeat;color:var(--heroink)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:10px 12px 10px 18px;margin-top:16px;background:rgba(7,7,15,.55);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.14);border-radius:999px}
+.brand{font-weight:800;font-size:18px;display:flex;gap:10px;align-items:center;text-decoration:none}
+.logo{width:32px;height:auto;display:block}
+.brand i{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:inline-block}
+.btn{display:inline-block;background:linear-gradient(90deg,#2fb4ff,#7a45ff);color:#fff;padding:11px 20px;border-radius:999px;font-weight:700;text-decoration:none;font-size:14px}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.35)}
+.btn:focus-visible,.chip:focus-visible,.card a:focus-visible{outline:3px solid var(--accent2);outline-offset:2px}
+.hero{padding:64px 0 72px;display:grid;gap:28px;justify-items:start}
+.glass{background:rgba(7,7,15,.58);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:32px;max-width:640px}
+.hero h1{text-shadow:0 2px 18px rgba(0,0,0,.45);font-size:clamp(32px,5.4vw,58px);line-height:1.08;margin:0;max-width:17ch;letter-spacing:-.02em;animation:rise .7s ease both}
+.hero p{max-width:56ch;color:#e3e8fb;font-size:18px;margin:18px 0 28px}
+.stats{display:flex;flex-wrap:wrap;gap:12px}
+.stat{background:rgba(7,7,15,.58);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:12px 18px;min-width:110px}
+.stat b{display:block;font-size:26px}
+.stat span{font-size:13px;color:#cdd5f0}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.hero h1{animation:none}}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;border-bottom:1px solid var(--line)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:14px 0}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 16px;border-radius:999px;font:600 14px Manrope,system-ui,sans-serif;cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:linear-gradient(90deg,#2fb4ff,#7a45ff);border-color:var(--accent);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px;padding:30px 0 56px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px;border-top:4px solid var(--c,var(--accent))}
+.card h3{margin:0;font-size:18px;line-height:1.3}
+.card p{margin:0;color:var(--mute);font-size:14.5px;flex:1}
+.meta{display:flex;justify-content:space-between;font-size:12.5px;color:var(--mute);font-weight:600}
+.card a.vis{font-weight:700;font-size:14px;color:var(--accent);text-decoration:none}
+.card a.vis:hover{text-decoration:underline}
+.nolink{font-size:13.5px;color:var(--mute)}
+footer{background:var(--hero);color:var(--heroink);padding:56px 0}
+footer h2{font-size:clamp(26px,4vw,38px);margin:0 0 10px;max-width:20ch}
+footer p{color:#c4cdea;margin:0 0 22px}
+.contact{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:15px;margin-bottom:26px}
+.small{font-size:13px;color:#8f9bc2;margin-top:30px}
+</style>
+</head>
+<body>
+<header class="top">
+<div class="wrap">
+<nav><a class="brand" href="https://www.scalabletechnologies.in"><img class="logo" alt="" src="logo.png">Scalable Technologies</a><a class="btn" href="https://www.scalabletechnologies.in/#contact-form">Book a call</a></nav>
+<div class="hero">
+<div class="glass">
+<h1>Software that runs your business. Marketing that grows it.</h1>
+<p>A selection of what our team has built: websites, web apps, AI applications, ERPs and CRMs for clients across education, construction, healthcare, industry and more.</p>
+<a class="btn" href="#work">See our work</a>
+</div>
+<div class="stats" id="stats"></div>
+</div>
+</div>
+</header>
+
+<div class="bar"><div class="wrap"><div class="chips" id="chips" role="group" aria-label="Filter projects"></div></div></div>
+<main class="wrap" id="work"><div class="grid" id="grid"></div></main>
+
+<footer>
+<div class="wrap">
+<h2>Have something to build? Let's talk.</h2>
+<p>A 30-minute call, no pitch deck. You'll hear back within one business day.</p>
+<div class="contact"><span>scalabletechnologies11@gmail.com</span><span>+91 97669 93471</span><span>+91 88300 02867</span><span>Mahda Towers, Pimpri, Pune</span></div>
+<a class="btn" href="https://www.scalabletechnologies.in/#contact-form">Book a free consultation</a>
+<div class="small">© 2026 Scalable Technologies. Pune, India</div>
+</div>
+</footer>
+
+<script>
+var COL={Websites:"#2f5bff","Web Apps":"#7a4dff",AI:"#12b5a6",ERP:"#f08a24",CRM:"#e0457b"};
+var P=[
+["Websites","Teachwill — Marketing Site",2024,"Marketing site for an online teaching platform, built to convert educators and students.","https://teachwill.com"],
+["Websites","Global Circle Edu",2024,"Study-abroad consultancy site showcasing destinations, universities and intakes.","https://globalcircleedu.com"],
+["Websites","P.K Builders",2025,"Project showcase for a construction developer, with ongoing and completed developments.","https://www.pkgroupcompanies.com/"],
+["Websites","LeanEHS",2023,"Corporate site for an Environment, Health & Safety consultancy.","https://leanehs.in"],
+["Websites","Flareo — 3D Rendering",2023,"Marketing and booking platform for 3D rendering, for architects and designers.","https://flareo-five.vercel.app"],
+["Websites","Creative Prints",2023,"E-commerce for custom printing: orders, design uploads and fulfilment tracking.","https://creativeprints.in"],
+["Websites","Shootesy",2025,"Marketplace to book photographers and videographers, with camera rentals.","https://shootesy.com"],
+["Websites","Techno Alliance",2025,"Corporate site for an electrical engineering firm serving railways, defense and industry.","https://techno-alliance-two.vercel.app"],
+["Websites","Muniya Foundation",2025,"NGO site for programs in education, health and women's empowerment.","https://www.muniyafoundation.com/"],
+["Websites","Prisalian Strategic",2025,"Executive advisory site placing C-suite executives, directors and family office advisors.","https://prisalian.vercel.app/"],
+["Websites","Magnus Media",2025,"Website for Magnus Media.","https://magnus-media.vercel.app/"],
+["Websites","V-Lift — Industrial Solutions",2025,"Material handling, casting and machined parts supplier, with an online catalogue.","https://v-lift.in"],
+["Web Apps","Teachwill — Learning Platform",2024,"SaaS for online teaching: courses, live sessions and student progress.","https://app.teachwill.com"],
+["Web Apps","DocFlow — PDF Editor",2023,"Browser tool to annotate, merge, split and edit PDFs.","https://document-editor-production-8b94.up.railway.app"],
+["Web Apps","DocFlow — Docx Editor",2023,"Online editor for real-time editing, formatting and export of .docx files.","https://docx-editor-production.up.railway.app"],
+["Web Apps","ID Card Studio",2025,"Lets schools and organizations collect member data online and auto-generate ID cards at scale.","https://princexerox.com"],
+["AI","Marketa — AI Marketing Suite",2024,"AI platform for campaigns, ad generation and automated website building.","https://marketa.space"],
+["AI","DigiMed AI",2025,"Hospital operations assistant for patient records, scheduling and diagnostics support.","https://digimed-ai.vercel.app/"],
+["ERP","Agrovita",2025,"Franchise inventory system with a B2B ordering app showing real-time stock.","https://play.google.com/store/apps/details?id=com.devx.agrovita&hl=en_IN"],
+["ERP","SBE — Crusher Plant ERP",2024,"Production tracking, raw material inventory and dispatch logs for a crusher plant.","https://sbe-web.vercel.app"],
+["ERP","Saitronics Billing",2023,"GST-compliant billing and payment tracking for an electronics business.","https://saitronics-billing.vercel.app"],
+["CRM","RIA — Visa Consultancy Panel",2024,"Admin panel for client files, application statuses and document checklists.","https://ria-web-app.vercel.app"]
+];
+var LABEL={All:"All","Websites":"Websites","Web Apps":"Web Apps","AI":"AI Applications","ERP":"ERPs","CRM":"CRMs"};
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+var cur="All",chips=document.getElementById("chips"),grid=document.getElementById("grid");
+function count(k){return k=="All"?P.length:P.filter(function(p){return p[0]==k}).length}
+function render(){
+ chips.innerHTML="";
+ Object.keys(LABEL).forEach(function(k){
+  var b=el("button","chip",LABEL[k]+" ("+count(k)+")");b.type="button";
+  b.setAttribute("aria-pressed",k==cur);
+  b.onclick=function(){cur=k;render()};chips.appendChild(b)});
+ grid.innerHTML="";
+ P.filter(function(p){return cur=="All"||p[0]==cur}).forEach(function(p){
+  var c=el("article","card");c.style.setProperty("--c",COL[p[0]]);
+  var m=el("div","meta");m.appendChild(el("span","",LABEL[p[0]]));m.appendChild(el("span","",p[2]));
+  c.appendChild(m);c.appendChild(el("h3","",p[1]));c.appendChild(el("p","",p[3]));
+  if(p[4]){var a=el("a","vis","Visit project");a.href=p[4];a.target="_blank";a.rel="noopener";c.appendChild(a)}
+  else c.appendChild(el("span","nolink","Private build, demo on request"));
+  grid.appendChild(c)})
+}
+var st=document.getElementById("stats");
+[[P.length,"projects delivered"],[count("Websites"),"websites"],[count("Web Apps"),"web apps"],[count("ERP")+count("CRM"),"ERP & CRM systems"]].forEach(function(s){
+ var d=el("div","stat");d.appendChild(el("b","",s[0]));d.appendChild(el("span","",s[1]));st.appendChild(d)});
+render();
+</script>
+</body>
+</html>
